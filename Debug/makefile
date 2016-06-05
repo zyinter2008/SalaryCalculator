@@ -9,6 +9,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
+-include gtest/src/subdir.mk
+-include gmock/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -44,7 +46,7 @@ all: SalaryCalculator
 SalaryCalculator: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C++ Linker'
-	g++  -o "SalaryCalculator" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/Users/zyin/Desktop/CodeProjects/C++/SalaryCalculator/gmock/include" -L"/Users/zyin/Desktop/CodeProjects/C++/SalaryCalculator/gmock/src" -L"/Users/zyin/Desktop/CodeProjects/C++/SalaryCalculator/gtest/include" -L"/Users/zyin/Desktop/CodeProjects/C++/SalaryCalculator/gtest/src" -o "SalaryCalculator" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
