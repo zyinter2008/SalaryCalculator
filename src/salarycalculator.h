@@ -18,11 +18,9 @@ public:
 
 private:
 	bool IsOddSeason(unsigned int month);
-	bool IsEvenSeason(unsigned int month);
 	bool IsOddMonth(unsigned int month);
-	bool IsEvenMonth(unsigned int month);
 	bool IsFirstHalfMonth(unsigned int month);
-	bool IsSecondHalfMonth(unsigned int month);
+	unsigned int getSeason(unsigned int month);
 };
 
 #endif /* SALARYCALCULATOR_H_ */
