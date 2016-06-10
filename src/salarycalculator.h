@@ -9,18 +9,23 @@
 #define SALARYCALCULATOR_H_
 
 #include <string>
+#include <map>
+#include "workers.h"
+
+#define WORKER_XI_REN "xiren"
+#define WORKER_QING_WEN "qingwen"
+#define WORKER_SHE_YUE "sheyue"
 
 using namespace std;
 
 class SalaryCalculator {
 public:
+	SalaryCalculator() ;
+	~ SalaryCalculator();
 	unsigned int getSalary(string name, unsigned int month);
 
 private:
-	bool IsOddSeason(unsigned int month);
-	bool IsOddMonth(unsigned int month);
-	bool IsFirstHalfMonth(unsigned int month);
-	unsigned int getSeason(unsigned int month);
+	map<string, Workers*> workers;
 };
 
 #endif /* SALARYCALCULATOR_H_ */

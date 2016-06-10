@@ -6,31 +6,24 @@
  */
 
 #include "salarycalculator.h"
+#include "xiren.h"
+#include "qingwen.h"
+#include "sheyue.h"
 
-unsigned int SalaryCalculator::getSeason(unsigned int month) {
-	return (month - 1) / 3 + 1;
+SalaryCalculator::SalaryCalculator() {
+	workers[WORKER_XI_REN] = new XiRen();
+	workers[WORKER_QING_WEN] = new QingWen();
+	workers[WORKER_SHE_YUE] = new SheYue();
 }
 
-bool SalaryCalculator::IsOddSeason(unsigned int month) {
-	return getSeason(month) == 1 || getSeason(month) == 3;
-}
-
-bool SalaryCalculator::IsOddMonth(unsigned int month) {
-	return month % 2 == 1;
-}
-
-bool SalaryCalculator::IsFirstHalfMonth(unsigned int month) {
-	return (month - 1) / 6 == 0;
+SalaryCalculator::~SalaryCalculator() {
+	for (map<string, Workers*>::const_iterator it = workers.begin();
+			it != workers.end(); it++) {
+		delete it->second;
+	}
 }
 
 unsigned int SalaryCalculator::getSalary(string name, unsigned int month) {
-	if (name == "xiren") {
-		return IsOddSeason(month) ? 24000 : 28000;
-	} else if (name == "qingwen") {
-		return IsOddMonth(month) ? 9000 : 8000;
-	} else if (name == "sheyue") {
-		return IsFirstHalfMonth(month) ? 3200 : 3800;
-	}
-	return 0;
+	return workers[name]->getSalary(month);
 }
 
