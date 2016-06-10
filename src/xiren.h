@@ -8,9 +8,9 @@
 #ifndef XIREN_H_
 #define XIREN_H_
 
-#include "workers.h"
+#include "worker.h"
 
-class XiRen :public Workers {
+class XiRen :public Worker {
 public:
 	XiRen(){};
 	~ XiRen(){};

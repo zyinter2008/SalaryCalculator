@@ -17,7 +17,7 @@ SalaryCalculator::SalaryCalculator() {
 }
 
 SalaryCalculator::~SalaryCalculator() {
-	for (map<string, Workers*>::const_iterator it = workers.begin();
+	for (map<string, Worker*>::const_iterator it = workers.begin();
 			it != workers.end(); it++) {
 		delete it->second;
 	}

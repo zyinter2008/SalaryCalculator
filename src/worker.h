@@ -1,19 +1,19 @@
 /*
- * workers.h
+ * worker.h
  *
  *  Created on: 2016年6月9日
  *      Author: zyin
  */
 
-#ifndef WORKERS_H_
-#define WORKERS_H_
+#ifndef WORKER_H_
+#define WORKER_H_
 
-class Workers {
+class Worker {
 public:
-	Workers(){};
-	virtual ~Workers(){};
+	Worker(){};
+	virtual ~Worker(){};
 
 	virtual unsigned int getSalary(unsigned int month)=0;
 };
 
-#endif /* WORKERS_H_ */
+#endif /* WORKER_H_ */

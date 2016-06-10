@@ -8,9 +8,9 @@
 #ifndef QINGWEN_H_
 #define QINGWEN_H_
 
-#include "workers.h"
+#include "worker.h"
 
-class QingWen: public Workers {
+class QingWen: public Worker {
 public:
 	QingWen(){};
 	~QingWen(){};

@@ -10,7 +10,8 @@
 
 #include <string>
 #include <map>
-#include "workers.h"
+
+#include "worker.h"
 
 #define WORKER_XI_REN "xiren"
 #define WORKER_QING_WEN "qingwen"
@@ -25,7 +26,7 @@ public:
 	unsigned int getSalary(string name, unsigned int month);
 
 private:
-	map<string, Workers*> workers;
+	map<string, Worker*> workers;
 };
 
 #endif /* SALARYCALCULATOR_H_ */

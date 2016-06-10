@@ -8,9 +8,9 @@
 #ifndef SHEYUE_H_
 #define SHEYUE_H_
 
-#include "workers.h"
+#include "worker.h"
 
-class SheYue: public Workers {
+class SheYue: public Worker {
 public:
 	SheYue(){};
 	~SheYue(){};
