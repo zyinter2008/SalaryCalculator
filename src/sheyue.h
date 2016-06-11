@@ -12,8 +12,12 @@
 
 class SheYue: public Worker {
 public:
-	SheYue(){};
-	~SheYue(){};
+	SheYue() {
+	}
+	;
+	~SheYue() {
+	}
+	;
 private:
 	unsigned int getSalary(unsigned int month);
 	bool IsFirstHalfMonth(unsigned int month);

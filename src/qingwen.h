@@ -12,8 +12,12 @@
 
 class QingWen: public Worker {
 public:
-	QingWen(){};
-	~QingWen(){};
+	QingWen() {
+	}
+	;
+	~QingWen() {
+	}
+	;
 private:
 	unsigned int getSalary(unsigned int month);
 	bool IsOddMonth(unsigned int month);

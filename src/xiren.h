@@ -10,10 +10,14 @@
 
 #include "worker.h"
 
-class XiRen :public Worker {
+class XiRen: public Worker {
 public:
-	XiRen(){};
-	~ XiRen(){};
+	XiRen() {
+	}
+	;
+	~ XiRen() {
+	}
+	;
 private:
 	unsigned int getSalary(unsigned int month);
 	bool IsOddSeason(unsigned int month);

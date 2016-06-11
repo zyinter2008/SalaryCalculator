@@ -10,8 +10,12 @@
 
 class Worker {
 public:
-	Worker(){};
-	virtual ~Worker(){};
+	Worker() {
+	}
+	;
+	virtual ~Worker() {
+	}
+	;
 
 	virtual unsigned int getSalary(unsigned int month)=0;
 };
