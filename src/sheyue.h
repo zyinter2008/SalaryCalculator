@@ -19,8 +19,9 @@ public:
 	}
 	;
 private:
-	unsigned int getSalary(unsigned int month);
 	bool IsFirstHalfMonth(unsigned int month);
+	unsigned int getBasicSalary(unsigned int month);
+	unsigned int getBonus(unsigned int month);
 };
 
 #endif /* SHEYUE_H_ */

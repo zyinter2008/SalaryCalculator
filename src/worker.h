@@ -17,7 +17,8 @@ public:
 	}
 	;
 
-	virtual unsigned int getSalary(unsigned int month)=0;
+	virtual unsigned int getBasicSalary(unsigned int month)=0;
+	virtual unsigned int getBonus(unsigned int month)=0;
 };
 
 #endif /* WORKER_H_ */

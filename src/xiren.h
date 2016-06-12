@@ -19,9 +19,10 @@ public:
 	}
 	;
 private:
-	unsigned int getSalary(unsigned int month);
 	bool IsOddSeason(unsigned int month);
 	unsigned int getSeason(unsigned int month);
+	unsigned int getBasicSalary(unsigned int month);
+	unsigned int getBonus(unsigned int month);
 };
 
 #endif /* XIREN_H_ */

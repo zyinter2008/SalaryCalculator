@@ -7,10 +7,13 @@
 
 #include "sheyue.h"
 
-unsigned int SheYue::getSalary(unsigned int month) {
-	return IsFirstHalfMonth(month) ? 3200 : 3800;
-}
-
 bool SheYue::IsFirstHalfMonth(unsigned int month) {
 	return (month - 1) / 6 == 0;
+}
+
+unsigned int SheYue::getBasicSalary(unsigned int month) {
+	return 600;
+}
+unsigned int SheYue::getBonus(unsigned int month) {
+	return IsFirstHalfMonth(month) ? 400 : 700;
 }

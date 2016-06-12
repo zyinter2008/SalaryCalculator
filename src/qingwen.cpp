@@ -7,10 +7,13 @@
 
 #include "qingwen.h"
 
-unsigned int QingWen::getSalary(unsigned int month) {
-	return IsOddMonth(month) ? 9000 : 8000;
-}
-
 bool QingWen::IsOddMonth(unsigned int month) {
 	return month % 2 == 1;
+}
+
+unsigned int QingWen::getBasicSalary(unsigned int month) {
+	return IsOddMonth(month) ? 900 : 800;
+}
+unsigned int QingWen::getBonus(unsigned int month) {
+	return 500;
 }
