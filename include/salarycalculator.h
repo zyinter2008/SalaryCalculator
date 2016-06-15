@@ -11,17 +11,17 @@
 #include <string>
 #include <map>
 
+using namespace std;
+
 #include "worker.h"
 #include "master.h"
 
-#define WORKER_XI_REN "xiren"
-#define WORKER_QING_WEN "qingwen"
-#define WORKER_SHE_YUE "sheyue"
-#define MASTER_BAO_YU "baoyu"
-#define MASTER_JIA_MU "jiamu"
-#define MASTER_JIA_ZHENG "jiazheng"
-
-using namespace std;
+const string  WORKER_XI_REN="xiren";
+const string  WORKER_QING_WEN="qingwen";
+const string  WORKER_SHE_YUE="sheyue";
+const string  MASTER_BAO_YU="baoyu";
+const string  MASTER_JIA_MU="jiamu";
+const string  MASTER_JIA_ZHENG="jiazheng";
 
 class SalaryCalculator {
 public:
