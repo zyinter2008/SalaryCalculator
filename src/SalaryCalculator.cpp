@@ -32,10 +32,13 @@ SalaryCalculator::~SalaryCalculator() {
 			it != workers.end(); it++) {
 		delete it->second;
 	}
+	workers.clear();
+
 	for (map<string, Master*>::const_iterator it = masters.begin();
 			it != masters.end(); it++) {
 		delete it->second;
 	}
+	masters.clear();
 }
 
 unsigned int SalaryCalculator::getSalary(string worker, string master,
