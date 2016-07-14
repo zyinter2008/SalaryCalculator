@@ -18,10 +18,11 @@ public:
 	~QingWen() {
 	}
 	;
-private:
-	bool IsOddMonth(unsigned int month);
+
 	unsigned int getBasicSalary(unsigned int month);
 	unsigned int getBonus(unsigned int month);
+private:
+	bool IsOddMonth(unsigned int month);
 };
 
 #endif /* QINGWEN_H_ */

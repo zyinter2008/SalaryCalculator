@@ -18,10 +18,11 @@ public:
 	~SheYue() {
 	}
 	;
+
+	unsigned int getBasicSalary(unsigned int month);
+		unsigned int getBonus(unsigned int month);
 private:
 	bool IsFirstHalfMonth(unsigned int month);
-	unsigned int getBasicSalary(unsigned int month);
-	unsigned int getBonus(unsigned int month);
 };
 
 #endif /* SHEYUE_H_ */

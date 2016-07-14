@@ -41,6 +41,13 @@ SalaryCalculator::~SalaryCalculator() {
 	masters.clear();
 }
 
+void SalaryCalculator::setWorkers(string name, Worker *worker){
+	workers[name]=worker;
+}
+void SalaryCalculator::setMasters(string name, Master *master){
+	masters[name]=master;
+}
+
 unsigned int SalaryCalculator::getSalary(string worker, string master,
 		unsigned int month) {
 	return masters[master]->getSalary(workers[worker]->getBasicSalary(month),

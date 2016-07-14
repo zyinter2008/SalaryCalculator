@@ -31,6 +31,8 @@ public:
 	SalaryCalculator() ;
 	~ SalaryCalculator();
 	unsigned int getSalary(string worker, string master, unsigned int month);
+	void setWorkers(string name, Worker *worker);
+	void setMasters(string name, Master *master);
 
 private:
 	map<string, Worker*> workers;

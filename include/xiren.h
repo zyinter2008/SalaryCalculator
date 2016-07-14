@@ -18,11 +18,12 @@ public:
 	~ XiRen() {
 	}
 	;
+
+	unsigned int getBasicSalary(unsigned int month);
+	unsigned int getBonus(unsigned int month);
 private:
 	bool IsOddSeason(unsigned int month);
 	unsigned int getSeason(unsigned int month);
-	unsigned int getBasicSalary(unsigned int month);
-	unsigned int getBonus(unsigned int month);
 };
 
 #endif /* XIREN_H_ */
