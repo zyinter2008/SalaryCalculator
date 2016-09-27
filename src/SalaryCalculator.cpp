@@ -1,10 +1,3 @@
-/*
- * salarycalculator.cpp
- *
- *  Created on: 2016��4��30��
- *      Author: zyin
- */
-
 #include "salarycalculator.h"
 #include "xiren.h"
 #include "qingwen.h"
